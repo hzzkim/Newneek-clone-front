@@ -1,0 +1,80 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-align: center;
+  }
+  
+  .modal {
+    font-family: 'Pretendard-Regular', sans-serif;
+    width: 516px;
+    height: 444px;
+    background: white;
+    border-radius: 8px;
+    padding: 28px;
+    margin: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .modalControl select {
+    height: 50px;
+    border: none;
+    font-weight: 600;
+    font-size: medium;
+    text-align: center;
+  }
+  .modalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1 1 0%;
+    width: 100%;
+  }
+
+  .button {
+    background-color: pink;
+    padding: 10px 20px;
+    width: 350px;
+    height: 60px;
+    border-color: #f5f5f5;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  
+  .modalField {
+    width: 470px;
+    height: 320px;
+    word-break: break-all;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    margin-top: 0.5rem;
+  }
+  
+  
+  .modalFooter {
+    display: flex;
+    background-color: pink;
+  }
+  
+  .modalClose {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  

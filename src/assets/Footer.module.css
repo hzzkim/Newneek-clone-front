@@ -1,0 +1,72 @@
+div, body {
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  font-family: Arial, sans-serif;
+  /* position: absolute;  */
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: green;
+}
+
+.footerContent {
+  background-color: #F5F5F5;
+  padding: 10px 20px;
+  /* height: 100%; */
+  display: flex;
+}
+
+.companyInfo {
+  flex: 1;
+}
+
+.companyInfo h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.companyInfo p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.footerLinks {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+}
+
+.linkColumn h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.linkColumn ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.linkColumn li {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.linkColumn li:hover {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+  }
+  
+  .footerLinks {
+    margin-top: 30px;
+  }
+}
