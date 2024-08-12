@@ -1,0 +1,256 @@
+h1, h2, h3, h4, h5, p, span {
+  margin: 0;
+}
+
+/* margin */
+.mtS {
+  margin-top: .375rem;
+}
+
+.mtL {
+  margin-top: .75rem;
+}
+
+.mbS {
+  margin-bottom: .375rem;
+}
+
+.mbL {
+  margin-bottom: .75rem;
+}
+
+/* font */
+.fontL {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+.fontS {
+  font-size: .875rem;
+  line-height: 1.125rem;
+  align-items: center;
+}
+
+.fontGrey {
+  color: rgb(87 91 92);
+}
+
+.fontRed {
+  color: red;
+}
+
+/* container */
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+/* tag */
+
+.tag {
+  font-size: 10px;
+  border: 1px solid rgb(87 91 92);;
+  padding: 3px;
+  border-radius: .5rem;
+  margin-left: .5rem;
+}
+
+/* button */
+.orangeBtn {
+  background: rgb(255 107 0);
+  border-radius: .5rem;
+  padding: .5rem;
+  border: none;
+  color: white;
+  font-weight: 700;
+}
+
+/* list 페이지 */
+
+.listContainer {
+  width: 40rem;
+  margin: auto;
+}
+
+.listItem {
+  padding: 1rem;
+  display: flex;
+  gap: .75rem;
+  align-items: center;
+  --tw-border-opacity: 1;
+  border: 1px solid rgb(228 229 229 / var(--tw-border-opacity));;
+  border-radius: .5rem;
+}
+
+.listProfile {
+  position: relative;
+  width: 72px;
+  height: 72px;
+}
+
+.listProfile img {
+  top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+  border-radius: .5rem;
+}
+
+.listDetail {
+  display: flex;
+  flex-direction: column;
+  gap:.25rem;
+}
+
+.listDetail p {
+  /* 2줄만 출력되게하는 코드 */
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.listDetail span {
+  font-size: 13px;
+  color: #999;
+}
+
+/* profile 페이지 */
+
+.profilecontainer {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.profileImg {
+  position: relative;
+  width: 104px;
+  height: 104px;
+}
+
+.profileImg img {
+  top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+  border-radius: .5rem;
+}
+
+.profilecontainer p {
+  /* 3줄만 출력되게하는 코드 */
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+/* post 페이지 */
+.postContainer {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  position: relative; /* 부모 요소에 상대 위치 설정 */
+}
+
+.postContainer::before {
+  content: '';
+  position: absolute;
+  top: calc(50px + .5rem); /* 프로필 이미지 끝에서 시작 */
+  left: 25px; /* 선의 위치를 맞춤 */
+  width: 2px;
+  height: calc(100% - 50px); /* 컨테이너 높이에서 프로필 이미지 높이만큼 뺌 */
+  background-color: #ccc;
+}
+
+.commentContainer {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  position: relative;
+}
+
+.postProfile {
+  display: flex;
+  gap: .5rem;
+  position: relative;
+}
+
+.postProfileImg {
+  position: relative;
+}
+
+.postProfileImg img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.postContent {
+  width: calc(100% - 50px - .5rem);
+  margin-left: calc(50px + .5rem); /* 프로필 이미지와 선 사이의 여백 */
+}
+
+.postContent img {
+  width: 100%;
+  height: auto;
+}
+
+.postContent p {
+  /* 8줄만 출력되게하는 코드 */
+  -webkit-line-clamp: 8;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.likes {
+  font-size: 13px;
+  color: #999;
+}
+
+.likes button {
+  border-radius: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #999;
+}
+
+/* line */
+.line {
+  background: #ccc;
+  width: 60%;
+  height: .1rem;
+  margin: auto;
+  margin-bottom: .75rem;
+}
+
+/* 버튼 스타일 */
+.postActions {
+  display: flex;
+  gap: .1rem;
+}
+
+.actionBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.actionBtn:hover {
+  color: #000;
+}
+
+.actionBtn:focus {
+  outline: none;
+}

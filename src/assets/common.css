@@ -1,0 +1,40 @@
+h1, h2, h3, h4, h5, p, span {
+  margin: 0;
+}
+
+/* margin */
+.mtS {
+  margin-top: .375rem;
+}
+
+.mtL {
+  margin-top: .75rem;
+}
+
+.mbS {
+  margin-bottom: .375rem;
+}
+
+.mbL {
+  margin-bottom: .75rem;
+}
+
+/* font */
+.fontL {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+.fontS {
+  font-size: .875rem;
+  line-height: 1.125rem;
+  align-items: center;
+}
+
+.fontGrey {
+  color: rgb(87 91 92);
+}
+
+.fontRed {
+  color: red;
+}
