@@ -17,8 +17,8 @@ import Signupform from '../pages/Signupform'
 
 const Router = () => {
     return (
-        <BrowserRouter>
-            <Routes>
+    <BrowserRouter>
+                <Routes>
                 <Route path="/" element={<Main />} />
                 <Route path="/series" element={<Series />} />
                 <Route path="/ground" element={<Ground />} />
@@ -26,22 +26,31 @@ const Router = () => {
                 <Route path="/Login" element={<Login />} />
                 <Route path="/sigupform" element={<Signupform />} />
             </Routes>
+      <Routes>
+        <Route path="/" element={<MainPage />}>
+          <Route index element={<Recommends />} />
+          <Route path="articles" element={<Articles />} />
+          <Route path="posts" element={<Posts />} />
+          <Route
+            path="/:authorId/article/:articleId"
+            element={<ArticleDetail />}
+          />
+        </Route>
+      </Routes>
+      <Routes>
+        <Route path="/grounds" element={<GroundList />} />
+        <Route path="/ground/:id" element={<GroundTest />} />
+        <Route path="/:author/post/:post" element={<GroundDetail />} />
+      </Routes>
+      <Routes>
+        <Route
+          path="SeriesPage"
+          element={<SeriesPage activeTab={activeTab} />}
+        />
+        <Route path="/SeriesDetail/:id" element={<SeriesDetail />} />
+      </Routes>
+    </BrowserRouter>
+  );
 
-            <Routes>
-                <Route path="/" element={<MainPage />}>
-                    <Route index element={<Recommends />} />
-                    <Route path="articles" element={<Articles />} />
-                    <Route path="posts" element={<Posts />} />
-                    <Route path="/:authorId/article/:articleId" element={<ArticleDetail />} />
-                </Route>
-            </Routes>
-            <Routes>
-                <Route path='/grounds' element={<GroundList />} />
-                <Route path='/ground/:id' element={<GroundTest />} />
-                <Route path='/:author/post/:post' element={<GroundDetail />} />
-            </Routes>
-        </BrowserRouter>
-    );
-};
 
 export default Router;

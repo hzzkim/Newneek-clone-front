@@ -1,0 +1,348 @@
+body {
+  overflow-y: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* Navbar */
+.outerContainer {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.container {
+  max-width: 648px;
+  min-height: 100vh;
+  margin: 0 auto;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  padding-top: 15px;
+}
+
+.navBar {
+  max-width: 648px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  overflow: hidden;
+  padding: 0 40px;
+  /* border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0; */
+  box-sizing: border-box;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; /* iOS에서 부드러운 스크롤 */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+
+.slickSlide {
+  overflow: visible;
+}
+
+.tabMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.tabItem {
+  /*flex: 1 1 0;*/
+  text-align: center;
+  cursor: pointer;
+  color: #757575;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 40px;
+  white-space: nowrap;
+  padding: 0 5px;
+}
+
+.tabItem a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.tabItem.active {
+  color: #ff6600;
+  border-bottom: 3px solid #ff6600 !important;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.tabItem:nth-child(n + 8) {
+  display: none;
+}
+
+/* SeriesList */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px 0;
+  max-width: 648px;
+  margin: 0 auto;
+}
+
+.content ul {
+  padding: 0 40px;
+}
+
+/* SeriesContent */
+.contentItem {
+  display: flex;
+  padding: 25px 0;
+  border-bottom: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.contentImg {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+.itemDetails {
+  flex: 1;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.itemTitle {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.itemInfo {
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.dot {
+  color: rgb(119 121 123);
+  font-size: 20px;
+}
+
+.articles {
+  color: rgb(17 18 19);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.authorImg {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.authorName {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 8px;
+  font-weight: 700;
+}
+
+.tag {
+  font-size: 12px;
+  color: rgb(151 155 158);
+  font-weight: 700;
+  border-radius: 15px;
+  border: 1px solid rgb(228 229 229);
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  line-height: 28px;
+}
+
+/* detail */
+.articleCount {
+  color: rgb(87 91 92);
+  padding: 20px 40px;
+  font-size: 20px;
+}
+.articleList {
+  max-width: 648px;
+  margin: 0 auto;
+}
+
+.mainTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.articleItem {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  padding: 0 40px;
+}
+
+.articleTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.articleContent {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.articleMeta {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.authorAvatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.authorName {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.postTime,
+.readCount {
+  margin-right: 10px;
+}
+
+.articleInteractions {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 20px;
+}
+
+.interactionBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  color: #888;
+  font-size: 12px;
+}
+
+.interactionBtn span {
+  margin-right: 3px;
+}
+
+.authorAvatar {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+}
+
+/* SeriesProfile */
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.seriesHeader {
+  display: flex;
+  justify-content: center;
+}
+
+.seriesIcon {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.seriesInfo {
+  text-align: center;
+}
+
+.seriesCategory {
+  color: grey;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.seriesTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.seriesTags {
+  margin-bottom: 20px;
+}
+
+.seriesTag {
+  background-color: #f0f0f0;
+  color: grey;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.seriesAuthor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.authorIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.authorName {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.authorId {
+  font-size: 12px;
+  color: grey;
+  margin-left: 5px;
+}
+
+.seriesMeta {
+  font-size: 12px;
+  color: grey;
+}
