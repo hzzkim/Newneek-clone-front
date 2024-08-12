@@ -1,0 +1,114 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  font-family: 'Pretendard-Regular', sans-serif;
+  width: 516px;
+  height: 444px;
+  background: white;
+  border-radius: 8px;
+  padding: 28px;
+  margin: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modalControl select {
+  height: 30px;
+  border: none;
+  font-weight: 600;
+  font-size: medium;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1 1 0%;
+  width: 100%;
+}
+
+.modalType {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 0%;
+  gap: 0.5rem;
+}
+
+.modalField {
+  width: 470px;
+  height: 320px;
+  word-break: break-all;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  margin-top: 0.5rem;
+}
+
+.contents {
+  color: rgb(182, 187, 191);
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  position: absolute;
+  pointer-events: none;
+}
+
+.modalFooter {
+  display: flex;
+  background-color: pink;
+}
+
+.modalClose {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modalSubmit {
+  background-color: rgb(206 208 209);
+  pointer-events: none;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .15s;
+  color: white;
+  font-weight: 700;
+  font-size: .75rem;
+  line-height: 1.125rem;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding: 0;
+  margin: 0;
+  width: 60px;
+  height: 36px;
+  border-radius: .75rem;
+  white-space: nowrap;
+  align-items: center;
+  cursor: default;
+  border: none;
+}
+
+.modalImg {
+  font-weight: 700 !important;
+}
+
+/* ---------------------------------- */

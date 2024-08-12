@@ -1,0 +1,205 @@
+
+.nav-btn {
+    font-family: 'Pretendard-Regular', sans-serif;
+    display: inline-block;
+    background-color: white;
+    font-size: 16px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    color: lightgray;
+    text-decoration: none;
+}
+
+.nav-btn.active {
+    font-family: 'Pretendard-Regular', sans-serif;
+    color: #FD631d;
+    border-bottom: 2px #FD631d solid;
+}
+
+/* ------------------------------------------- */
+
+.tabs-container {
+    display: flex;
+    justify-content: flex-end; /* 자식 요소를 우측으로 정렬 */
+    margin-bottom: 1rem; /* 기존 여백 유지 */
+    margin-top: 20px;
+    margin-left: 85%;
+}
+
+.tab {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: lightgray;
+    font-size: small;
+    white-space: nowrap;
+}
+
+.tab.active {
+    color: #FD631D; /* 활성 탭 색상 */
+}
+
+/* ------------------------------------------- */
+
+.image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0px;
+    color: transparent;
+}
+
+.responsive-image {
+    width: 768px;
+    max-width: 100%;
+}
+
+/* 뷰포트가 768px 이하일 때 */
+@media (max-width: 768px) {
+    .responsive-image {
+        width: 100vw;
+    }
+}
+
+.spot {
+    background-color: yellow;
+}
+
+.noBorder {
+    border: none;
+}
+
+/* ------------------------------------------- */
+.profileSize {
+    width: 28px;
+    height: 28px;
+    color: transparent;
+}
+
+.article-container {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        "category category "
+        "title thumbnail"
+        "content thumbnail"
+        "writer-info interactions"
+        "hr hr";
+    grid-template-columns: 1fr auto;
+    grid-gap: 1rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.category {
+    grid-area: category;
+    font-size: 0.875rem;
+    color: rgb(44, 43, 43);
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 3px 6px;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    width: max-content;
+}
+
+.title {
+    grid-area: title;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #0A1618;
+    display: flex;
+    align-items: center;
+}
+
+.thumbnail {
+    grid-area: thumbnail;
+    width: 130px !important;
+    height: 92px !important;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-left: auto;
+}
+
+.content {
+    grid-area: content;
+    font-size: 1rem;
+    color: #7e7d7d;
+    font-weight: lighter;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    margin-right: 1rem; /* 썸네일과의 간격 조정 */
+}
+
+.metadata {
+    grid-area: writer-info / writer-info / interactions / interactions;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: #999;
+}
+
+.writer-info {
+    grid-area: writer-info;
+}
+
+.interactions {
+    grid-area: interactions;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.divider {
+    grid-area: hr;
+    border: none; 
+    border-top: 1px solid #f0eded;
+    margin: 20 auto;
+    width: 95%;
+}
+
+/* ------------------------------------------- */
+@media (min-width: 768px) {
+    .md\:px-9 {
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+    }
+}
+@media (min-width: 768px) {
+    .md\:border-x-gray-100 {
+        --tw-border-opacity: 1;
+        border-left-color: rgb(238 238 238 / var(--tw-border-opacity));
+        border-right-color: rgb(238 238 238 / var(--tw-border-opacity));
+    }
+}
+@media (min-width: 768px) {
+    .md\:border-x {
+        border-left-width: 1px;
+        border-right-width: 1px;
+    }
+}
+.flex-col {
+    flex-direction: column;
+}
+.flex-1 {
+    flex: 1 1 0%;
+}
+.max-w-screen-sm {
+    max-width: 648px;
+}
+.w-full {
+    width: 100%;
+}
+.flex {
+    display: flex;
+}
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
