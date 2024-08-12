@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useState} from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainPage from '../pages/MainPage';
 import Articles from '../components/Articles';
@@ -14,8 +14,18 @@ import Ground from '../pages/Ground';
 import ImNew from '../pages/ImNew';
 import Login from '../pages/Login';
 import Signupform from '../pages/Signupform'
+import SeriesPage from '../pages/SeriesPage'
+import SeriesDetail from "../components/series/SeriesDetail";
+
 
 const Router = () => {
+    const [activeTab, setActiveTab] = useState("전체");
+
+    const handleFilter = (tabName) => {
+      console.log("Filtering tab:", tabName);
+      setActiveTab(tabName);
+    };
+
     return (
     <BrowserRouter>
                 <Routes>
@@ -44,13 +54,13 @@ const Router = () => {
       </Routes>
       <Routes>
         <Route
-          path="SeriesPage"
+          path="Series"
           element={<SeriesPage activeTab={activeTab} />}
         />
         <Route path="/SeriesDetail/:id" element={<SeriesDetail />} />
       </Routes>
     </BrowserRouter>
   );
-
+}
 
 export default Router;
