@@ -1,22 +1,20 @@
 .main {
     display: flex;
     flex-direction: column;
-    
+    position: relative;
+    min-height: 100vh;
 }
 
 .parent {
-    /* background: pink; */
-    height: 100%;
-    min-height: 100vh;
     margin-top: 3rem;
     display: flex;
     flex-direction: row;
 }
 
 .parent > div {
-    height: 100vh;
+    /* height: 100vh; */
     border-right: 1px solid #EEE;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .child1 {
@@ -25,13 +23,8 @@
 
 .child2 {
     flex: 2;
-    height: 100%;
-    margin: 0 auto;
-    
 }
 
 .child3 {
     flex: 1;
-    height: 100%;
-    /* border: 3px solid hotpink; */
 }

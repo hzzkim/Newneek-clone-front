@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ground from '../../ground';
-import styles from '../../assets/ground.module.css'
+import styles from './ground.module.css';
 
 function GroundList() {
   const navigate = useNavigate();

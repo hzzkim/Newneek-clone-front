@@ -2,14 +2,13 @@ import React from "react";
 import ArticleData from "../../ArticleData";
 import styles from "../../assets/Series.module.css";
 import { useParams } from "react-router-dom";
-import SeriesProfile from "./SeriesProfile";
 
 function SeriesDetail() {
-  const { id } = useParams(); // URL에서 id 가져오기
+  const { author, seriesId } = useParams(); // URL에서 author와 seriesId 가져오기
 
-  // id에 해당하는 시리즈 찾기
+  // seriesId에 해당하는 시리즈 찾기
   const series = ArticleData.find(
-    (serie) => serie.seriesId === parseInt(id, 10)
+    (serie) => serie.seriesId === parseInt(seriesId, 10) && serie.author === author
   );
 
   if (!series) {
@@ -18,7 +17,6 @@ function SeriesDetail() {
 
   return (
     <div className={styles.articleList}>
-      <SeriesProfile series={series} />
 
       <div className={styles.articleCount}>
         아티클 {series.articles.length}개

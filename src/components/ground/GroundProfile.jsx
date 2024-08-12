@@ -1,6 +1,6 @@
 import React from 'react';
 import ground from '../../ground';
-import styles from '../../assets/ground.module.css'
+import styles from './ground.module.css';
 
 function GroundProfile({id}) {
   const selectedGround = ground.find((item) => item.id === parseInt(id));

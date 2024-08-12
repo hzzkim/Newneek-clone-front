@@ -36,15 +36,21 @@ function GroundDetail() {
     const postId = parseInt(post);
     const foundAuthor = users.find(user => user.id === authorId);
     const foundPost = content.find(post => post.id === postId);
+
+    // foundPost가 존재하는 경우에만 groundId를 참조
+    if (foundPost) {
+      const foundGround = ground.find(ground => ground.id === foundPost.groundId);
+      setFoundGround(foundGround);
+    }
+
     const comments = content.filter(comment => comment.parentId === postId);
-    const foundGround = ground.find(ground => ground.id === foundPost.groundId);
 
     setFoundAuthor(foundAuthor);
     setFoundPost(foundPost);
     setPostComments(comments);
-    setFoundGround(foundGround);
   }, [author, post]);
 
+  // foundAuthor, foundPost, foundGround가 모두 존재할 때만 렌더링
   if (!foundAuthor || !foundPost || !foundGround) {
     return <div>Loading...</div>;
   }

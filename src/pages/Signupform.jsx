@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../templete/Header.jsx';
-import Footer from '../templete/Footer.jsx';
+import Header from '../template/Header.jsx';
+import Footer from '../template/Footer.jsx';
 import styles from '../assets/Signupform.module.css';
 
 const SignupForm = () => {
