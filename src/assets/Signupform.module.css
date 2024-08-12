@@ -1,0 +1,63 @@
+.signupContainer {
+  max-width: 500px;
+  margin: 0 auto;
+  padding:67px 20px;
+}
+
+.signformName {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.signform_p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.viewTerms {
+  margin-left: auto;
+  color: #666;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.signupButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #f57c00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
