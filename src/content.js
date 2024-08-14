@@ -3,7 +3,7 @@ const groundContent = [
     id: 1,
     groundId: 0,
     userId: 1,
-    content: "저희집 첫째 뽀떼냥이 '앵고'입니다!",
+    content: "저희집 첫째 뽀떼냥이 '앵고'입니다! ",
     image: 'https://i.pinimg.com/564x/04/bb/ac/04bbacb21948668c6a4ef9e36acb098e.jpg',
     date: '2024-07-31T10:00:00Z',
     parentId: null
