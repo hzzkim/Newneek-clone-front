@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import '../assets/styleSheet.css';
 
 // 샘플 포스트 데이터 (실제 데이터로 대체)

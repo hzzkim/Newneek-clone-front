@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import styles from '../assets/Main.module.css';
 import StickyNav from "../components/StickyNav";
-import { Outlet, useLocation, useParams } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 function MainPage() {
   const location = useLocation();
@@ -22,7 +22,7 @@ function MainPage() {
         </div>
 
         {/* 중앙 */}
-        <div className={styles.child2}>
+        <div>
           {showStickyNav && <StickyNav />}
           <Outlet />
         </div>

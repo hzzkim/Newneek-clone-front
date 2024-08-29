@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom'; 
 import articles from '../articles';
 import '../assets/MainStyles.css';
 import '../assets/styleSheet.css';
@@ -30,7 +30,7 @@ const ArticleDetail = () => {
             <div className='flex flex-col pb-[106px] pt-5 md:pb-[88px] md:pt-8'>
                 <div className='mx-auto w-full max-w-screen-sm px-4 md:px-0'>
                     <div className='relative mb-5 aspect-[16/9] md:mb-7'>
-                        <img src={article.img} alt={article.title} className='image responsive-image rounded-lg bg-gray-200 object-cover object-center' />
+                        <img src={article.img} alt={article.title} className='ss-img image responsive-image rounded-lg bg-gray-200 object-cover object-center' />
                     </div>
                 </div>
                 <div className='flex flex-col gap-10'>
@@ -74,8 +74,8 @@ const ArticleDetail = () => {
                     <div className='content'><p className='content'>{article.content}</p></div>
                 </div>
             </div>
-            <img src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fw94Q8%2FbtsIS9e8Pkk%2FZtQ3kHPtaXgllhZUnWnhBk%2Fimg.jpg' alt='test'></img>
-            <img src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbaqRoG%2FbtsITBhWVzQ%2FoSWXUmVR7KXGRsYrJoZIuK%2Fimg.png' alt='test'></img>
+            <img src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fw94Q8%2FbtsIS9e8Pkk%2FZtQ3kHPtaXgllhZUnWnhBk%2Fimg.jpg' alt='test' className='ss-img'></img>
+            <img src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbaqRoG%2FbtsITBhWVzQ%2FoSWXUmVR7KXGRsYrJoZIuK%2Fimg.png' alt='test' className='ss-img'></img>
             <div className='dummy mx-auto flex h-full flex-1 flex-col px-4 md:px-0 max-w-screen-sm'>
                 시리즈 영역
             </div>

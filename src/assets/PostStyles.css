@@ -14,7 +14,7 @@ body {
 .main-div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     overflow: hidden;
     box-sizing: border-box;
@@ -202,12 +202,12 @@ body {
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .main-div {
         padding-left: 0;
         padding-right: 0;
     }
-}
+} */
 
 @media (min-width: 768px) {
     .modal {

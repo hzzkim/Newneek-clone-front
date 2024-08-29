@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Articles from '../components/Articles';
 import Recommends from '../components/Recommends';
@@ -15,6 +15,7 @@ import SeriesDetail from "../components/series/SeriesDetail";
 import GroundDetail from '../components/ground/GroundDetail';
 import Grounds from '../pages/Grounds';
 import Series from '../pages/Series';
+import TestPage from '../pages/TestPage';  // 에디터 테스트용 페이지
 
 const Router = () => {
 
@@ -42,6 +43,7 @@ const Router = () => {
         <Route path=":author/series/:seriesId" element={<SeriesDetail />} />
       </Route>
 
+      <Route path="/test" element={<TestPage />} />  {/* TestPage 경로 추가 */}
     </Routes>
   );
 };

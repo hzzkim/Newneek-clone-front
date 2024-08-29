@@ -1,5 +1,5 @@
 /* black: '#0A1618'
-orange: '#FD631D'
+orange: '#FD631D' 
 bg: '#E6E4DA' */
 
 @font-face {
@@ -169,7 +169,12 @@ audio,canvas,embed,iframe,img,object,svg,video {
     vertical-align: middle
 }
 
-img,video {
+.ss-img {
+    max-width: 100%;
+    height: auto
+}
+
+.Ssvideo {
     max-width: 100%;
     height: auto
 }
