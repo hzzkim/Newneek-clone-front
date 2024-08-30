@@ -1,25 +1,13 @@
-import React, { useState } from 'react';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';  // Quill 에디터 스타일 임포트
+// TestPage.jsx
+import React from 'react';
+import Editor from '../components/editor';
+import 'react-quill/dist/quill.snow.css'; // Quill 에디터의 기본 스타일
 
 const TestPage = () => {
-  const [editorContent, setEditorContent] = useState('');
-
-  const handleEditorChange = (content) => {
-    setEditorContent(content);
-  };
-
   return (
-    <div>
-      <h1 style={{ marginTop: '20px'}}>Test Page</h1>
-      
-      <div style={{ marginTop: '20px', width: '500px', height:'500px' }}>
-        <h2>Quill Editor</h2>
-        <ReactQuill 
-          value={editorContent}
-          onChange={handleEditorChange}
-        />
-      </div>
+    <div className="test-page">
+      <h1 style={{ marginTop: "100px" }}>React Quill 에디터 테스트</h1>
+      <Editor />
     </div>
   );
 };
