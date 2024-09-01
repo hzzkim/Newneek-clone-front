@@ -5,11 +5,9 @@ div, body {
 
 .footer {
   font-family: Arial, sans-serif;
-  /* position: absolute;  */
+  position: relative; 
+  transform: translatY(-100%);
   width: 100%;
-  left: 0;
-  bottom: 0;
-  background: green;
 }
 
 .footerContent {

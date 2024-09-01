@@ -27,8 +27,8 @@ const Header = () => {
             <nav>
               <ul>
                 <li onClick={() => navigate('/')}>홈</li>
-                <li onClick={() => navigate('/Series')}>시리즈</li>
-                <li onClick={() => navigate('/Ground')}>그라운드</li>
+                <li onClick={() => navigate('/series')}>시리즈</li>
+                <li onClick={() => navigate('/grounds')}>그라운드</li>
                 <li onClick={() => navigate('/ImNew')}>아임뉴</li>
               </ul>
             </nav>
