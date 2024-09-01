@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import styles from '../assets/Main.module.css';
 import GroundProfile from "../components/ground/GroundProfile";
 import { Outlet, useLocation, useParams } from "react-router-dom";
 import groundContent from '../content';  // Post 데이터베이스 예시
@@ -27,23 +26,21 @@ function MainPage() {
   const isGrounds = location.pathname.startsWith('/grounds');
 
   return (
-    <div className={styles.main}>
-      <div className={styles.parent}>
-        {/* 왼쪽 */}
-        <div className={styles.child1}>
-          {isGrounds ? null : groundId && <GroundProfile id={groundId} />}
-        </div>
+    <main className='relative flex min-h-screen w-full max-w-screen-xl flex-1 flex-row mx-auto my-0 pl-safe-left-4 pr-safe-right-4 pt-16'>
+      {/* 왼쪽 */}
+      <aside className='custom-scroll-bar sticky top-16 z-40 h-[calc(100vh-64px)] w-[216px] flex-col py-7 xl:flex'>
+        {isGrounds ? null : groundId && <GroundProfile id={groundId} />}
+      </aside>
 
-        {/* 중앙 */}
-        <div className={styles.child2}>
-          <Outlet />
-        </div>
-
-        {/* 오른쪽 */}
-        <div className={styles.child3}>
-        </div>
+      {/* 중앙 */}
+      <div className='mx-auto flex w-full max-w-screen-sm'>
+        <Outlet />
       </div>
-    </div>
+
+      {/* 오른쪽 */}
+      <aside className='custom-scroll-bar sticky top-16 z-40 h-[calc(100vh-64px)] w-[238px] flex-col py-7 xl:flex'>
+      </aside>
+    </main>
   );
 }
 

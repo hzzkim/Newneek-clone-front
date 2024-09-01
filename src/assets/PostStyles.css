@@ -10,6 +10,24 @@ body {
     font-family: 'Pretendard-Regular', sans-serif;
 }
 
+/* 여기서부터 고우리 추가 */
+
+.tag {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  border: 1px solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(228 229 229 / var(--tw-border-opacity));
+  padding: 0 5px;
+  border-radius: 1rem;
+  font-size: .75rem;
+  line-height: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(151 155 158 / var(--tw-text-opacity));
+}
+
+/* 여기까지 고우리 추가 */
+
 /* Layout for the entire app */
 .main-div {
     display: flex;

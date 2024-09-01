@@ -1,6 +1,11 @@
-/* black: '#0A1618'
-orange: '#FD631D' 
-bg: '#E6E4DA' */
+/* 
+black: '#0A1618'
+orange: '#FD631D'
+bg: '#E6E4DA' 
+옅은 회색: #eee
+진한 회색: #ccc
+divider: rgb(238 238 238)
+*/
 
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -66,6 +71,10 @@ table {
     text-indent: 0;
     border-color: inherit;
     border-collapse: collapse
+}
+
+button {
+    border: none;
 }
 
 button,input,optgroup,select,textarea {
@@ -411,8 +420,8 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 }
 
 .content p {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem
+    /* margin-top: 1.5rem;
+    margin-bottom: 1.5rem */
 }
 
 .content h1 {
@@ -448,8 +457,8 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 }
 
 .content h3 {
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
+    /* margin-top: 2.5rem;
+    margin-bottom: 1rem; */
     font-size: 1.25rem;
     line-height: 1.75rem;
     font-weight: 700;
@@ -459,17 +468,17 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 
 @media (min-width: 768px) {
     .content h3 {
-        margin-bottom:1.25rem
+        /* margin-bottom:1.25rem */
     }
 }
 
 .content h3+p {
-    margin-top: 1rem
+    /* margin-top: 1rem */
 }
 
 @media (min-width: 768px) {
     .content h3+p {
-        margin-top:1.25rem
+        /* margin-top:1.25rem */
     }
 }
 
