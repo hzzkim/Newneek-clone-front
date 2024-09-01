@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/styleSheet.css';
+import '../assets/styleSheet.css'; 
 import '../assets/MainStyles.css'
 import { useNavigate, useLocation } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ function StickyNav() {
     };
 
     return (
-        <div className='sticky top-16 z-10 -mx-4 mb-5 bg-white pt-3 md:-mx-9 md:mb-6'>
+        <div className='sticky top-12 z-10 -mx-4 mb-5 bg-white pt-3 md:-mx-9 md:mb-6'>
             <div className='relative overflow-hidden'>
                 <div className='border-b border-gray-200 bg-white'>
                     <div className='relative overflow-hidden'>

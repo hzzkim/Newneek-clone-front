@@ -7,8 +7,6 @@ bg: '#E6E4DA'
 divider: rgb(238 238 238)
 */
 
-
-
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -180,7 +178,12 @@ audio,canvas,embed,iframe,img,object,svg,video {
     vertical-align: middle
 }
 
-img,video {
+.ss-img {
+    max-width: 100%;
+    height: auto
+}
+
+.Ssvideo {
     max-width: 100%;
     height: auto
 }
