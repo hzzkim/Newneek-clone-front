@@ -28,10 +28,6 @@ const Editor = () => {
         placeholder="내용을 입력하세요..."
         modules={modules}
       />
-      <div>
-        <h3>출력된 내용:</h3>
-        <div dangerouslySetInnerHTML={{ __html: editorContent }} />
-      </div>
     </div>
   );
 };
