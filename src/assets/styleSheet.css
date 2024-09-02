@@ -14,6 +14,24 @@ divider: rgb(238 238 238)
     font-style: normal;
 }
 
+/* 에디터 css 속성 수정 */
+.ql-toolbar {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgb(238, 238, 238) !important;
+}
+
+.ql-container {
+    border: none !important;
+}
+
+.ql-editor.ql-blank::before {
+    font-style: normal !important;
+}
+
+/* 에디터 css 속성 수정 끝 */
+
 body {
     font-family: 'Pretendard-Regular', sans-serif;
 }

@@ -16,6 +16,7 @@ import PostDetail from '../components/ground/PostDetail';
 import Grounds from '../pages/Grounds';
 import Series from '../pages/Series';
 import TestPage from '../pages/TestPage';  // 에디터 테스트용 페이지
+import ArticleEdit from '../pages/ArticleEdit';
 
 const Router = () => {
 
@@ -42,6 +43,8 @@ const Router = () => {
         <Route path="series" element={<SeriesPage />} />
         <Route path=":author/series/:seriesId" element={<SeriesDetail />} />
       </Route>
+
+      <Route path='/article/edit' element={<ArticleEdit/>}/>
 
       <Route path="/test" element={<TestPage />} />  {/* TestPage 경로 추가 */}
     </Routes>
