@@ -19,7 +19,8 @@ function Login({ onClose}) {
           <button className={styles.button}>Apple 로그인</button>
           <button className={styles.button}>이메일 로그인</button>
         </div>
-        <a onClick={() => navigate('/sigupform')} style={{ cursor: 'pointer' }}>회원가입 </a>
+        {/* <a href="/Sign">회원가입</a> */}
+        <a onClick={() => navigate('/Signupform')} style={{ cursor: 'pointer' }}>회원가입 </a>
         비밀번호 찾기
       </div>
     </div>
