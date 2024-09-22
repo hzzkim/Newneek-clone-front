@@ -24,7 +24,7 @@ function StickyNav() {
                                     className={`nav-btn ${isActive('/') ? 'active' : ''}`}
                                 >
                                     추천
-                                </button>
+                                </button>   
                                 <button
                                     onClick={() => handleClick('/articles')}
                                     className={`nav-btn ${isActive('/articles') ? 'active' : ''}`}

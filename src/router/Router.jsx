@@ -17,6 +17,9 @@ import Grounds from '../pages/Grounds';
 import Series from '../pages/Series';
 import TestPage from '../pages/TestPage';  // 에디터 테스트용 페이지
 import ArticleEdit from '../pages/ArticleEdit';
+import Categories from '../pages/Categories';
+import SeriesCate from '../components/categories/SeriesCate';
+import GroundCate from '../components/categories/GroundCate';
 
 const Router = () => {
 
@@ -47,6 +50,11 @@ const Router = () => {
       <Route path='/article/edit' element={<ArticleEdit/>}/>
 
       <Route path="/test" element={<TestPage />} />  {/* TestPage 경로 추가 */}
+      
+      <Route path='/categories' element={<Categories />}>
+        <Route path='seriescategory' element={<SeriesCate />} />
+        <Route path='groundcategory' element={<GroundCate />} />
+      </Route>
     </Routes>
   );
 };
