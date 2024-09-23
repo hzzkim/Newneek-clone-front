@@ -8,7 +8,7 @@ const TestPage = () => {
     <div className="test-page">
       <h1 style={{ marginTop: "100px" }}>React Quill 에디터 테스트</h1>
       <Editor />
-    </div>
+    </div> 
   );
 };
 
