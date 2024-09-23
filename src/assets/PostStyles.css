@@ -1,26 +1,27 @@
 /* font-face */
 @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
-    font-family: 'Pretendard-Regular', sans-serif;
+  font-family: "Pretendard-Regular", sans-serif;
 }
 
 /* 여기서부터 고우리 추가 */
 
 .tag {
-  margin-left: .5rem;
-  margin-right: .5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   border: 1px solid;
   --tw-border-opacity: 1;
   border-color: rgb(228 229 229 / var(--tw-border-opacity));
   padding: 0 5px;
   border-radius: 1rem;
-  font-size: .75rem;
+  font-size: 0.75rem;
   line-height: 1rem;
   --tw-text-opacity: 1;
   color: rgb(151 155 158 / var(--tw-text-opacity));
@@ -30,193 +31,206 @@ body {
 
 /* Layout for the entire app */
 .main-div {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    overflow: hidden;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 
 /* Tabs */
 .tabs-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 1rem;
-    margin-top: 20px;
-    margin-left: 85%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  margin-top: 20px;
+  margin-left: 85%;
 }
 
 .tab {
-    margin-left: 1rem;
-    text-decoration: none;
-    color: lightgray;
-    font-size: small;
-    white-space: nowrap;
-    border: none;
-    background: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  color: lightgray;
+  font-size: small;
+  white-space: nowrap;
+  border: none;
+  background: white;
 }
 
 .tab.active {
-    color: #FD631D; /* 활성 탭 색상 */
+  color: #fd631d; /* 활성 탭 색상 */
 }
 
 /* TypeField */
 .typeField {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: left;
-    margin-bottom: 40px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  margin-bottom: 40px;
 }
 
 .typeField div {
-    display: inline-block;
+  display: inline-block;
 }
 
 .typeField img {
-    border-radius: 50%;
-    margin-right: 10px;
-    width: 50px;
-    height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
 }
 
 .typeField button {
-    width: 520px;
-    height: 40px;
-    border-radius: 30px;
-    border: lightgray 1px solid;
-    color: #dbdbdb;
-    background-color: white;
-    padding-left: 15px;
-    text-align: left;
+  width: 520px;
+  height: 40px;
+  border-radius: 30px;
+  border: lightgray 1px solid;
+  color: #dbdbdb;
+  background-color: white;
+  padding-left: 15px;
+  text-align: left;
 }
 
 /* Modal Styles */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 .modal {
-    font-family: 'Pretendard-Regular', sans-serif;
-    width: 516px;
-    height: 444px;
-    background: white;
-    border-radius: 8px;
-    padding: 28px;
-    margin: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
+  font-family: "Pretendard-Regular", sans-serif;
+  width: 516px;
+  height: 444px;
+  background: white;
+  border-radius: 8px;
+  padding: 28px;
+  margin: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .postSelection {
-    height: 30px;
-    border: none;
-    font-weight: 600;
-    font-size: medium;
+  height: 30px;
+  border: none;
+  font-weight: 600;
+  font-size: medium;
 }
 
 .modal-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    flex: 1 1 0%;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1 1 0%;
+  width: 100%;
 }
 
 .modalType {
-    display: flex;
-    flex-direction: row;
-    flex: 1 1 0%;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 0%;
+  gap: 0.5rem;
 }
 
 .modalField {
-    width: 470px;
-    height: 320px;
-    word-break: break-all;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 0%;
-    margin-top: 0.5rem;
+  width: 470px;
+  height: 320px;
+  word-break: break-all;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  margin-top: 0.5rem;
+  pointer-events: auto; /*윤지수정*/
+  position: relative;
+  z-index: 10;
 }
 
 .contents {
-    color: rgb(182, 187, 191);
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    position: absolute;
-    pointer-events: none;
+  color: rgb(182, 187, 191);
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  /*overflow: visible;*/
+  /*display: -webkit-box;*/
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  /*position: absolute;*/
+  /*윤지수정*/
+  display: inline-block;
+  pointer-events: auto;
+  outline: none;
+  height: auto;
+  width: 100%;
+  text-align: left !important;
+  direction: ltr !important;
+  unicode-bidi: normal;
+  white-space: pre-wrap;
 }
 
 .modalFooter {
-    display: flex;
-    background-color: pink;
+  display: flex;
+  background-color: pink;
 }
 
 .modal-close {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    background: none;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .modal-submit {
-    background-color: rgb(206 208 209);
-    pointer-events: none;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
-    transition-duration: .15s;
-    color: white;
-    font-weight: 700;
-    font-size: .75rem;
-    line-height: 1.125rem;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding: 0;
-    margin: 0;
-    width: 60px;
-    height: 36px;
-    border-radius: .75rem;
-    white-space: nowrap;
-    align-items: center;
-    cursor: default;
-    border: none;
+  background-color: rgb(206 208 209);
+  /*pointer-events: none;*/
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+  color: white;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding: 0;
+  margin: 0;
+  width: 60px;
+  height: 36px;
+  border-radius: 0.75rem;
+  white-space: nowrap;
+  align-items: center;
+  cursor: default;
+  border: none;
 }
 
 .modal-img {
-    font-weight: 700 !important;
+  font-weight: 700 !important;
 }
 
 /* Divider */
 .divider {
-    grid-area: hr;
-    border: none;
-    border-top: 1px solid #f0eded;
-    margin: 20 auto;
-    width: 95%;
+  grid-area: hr;
+  border: none;
+  border-top: 1px solid #f0eded;
+  margin: 20 auto;
+  width: 95%;
 }
 
 /* Media Queries */
@@ -228,163 +242,161 @@ body {
 } */
 
 @media (min-width: 768px) {
-    .modal {
-        padding: 1.75rem;
-        max-width: 572px;
-        min-height: 500px;
-    }
+  .modal {
+    padding: 1.75rem;
+    max-width: 572px;
+    min-height: 500px;
+  }
 }
-
 
 /* -----------하하 나중에 정리해야지 */
 /* margin */
 .mtS {
-    margin-top: .375rem;
-  }
-  
-  .mtL {
-    margin-top: .75rem;
-  }
-  
-  .mbS {
-    margin-bottom: .375rem;
-  }
-  
-  .mbL {
-    margin-bottom: .75rem;
-  }
-  
-  /* font */
-  .fontL {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-  
-  .fontS {
-    font-size: .875rem;
-    line-height: 1.125rem;
-  }
-  
-  .fontGrey {
-    color: rgb(87 91 92);
-  }
-  
-  .fontRed {
-    color: red;
-  }
-  
-  /* container */
-  .container {
-    width: 100%;
-    margin: auto;
-  }
-  
-  /* post 페이지 */
-  .postContainer {
-    width: 600px;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    position: relative; /* 부모 요소에 상대 위치 설정 */
-  }
-  
-  .postContainer::before {
-    content: '';
-    position: absolute;
-    top: calc(50px + .5rem); /* 프로필 이미지 끝에서 시작 */
-    left: 25px; /* 선의 위치를 맞춤 */
-    width: 2px;
-    height: calc(100% - 50px); /* 컨테이너 높이에서 프로필 이미지 높이만큼 뺌 */
-    background-color: #ccc;
-  }
-  
-  .commentContainer {
-    width: 600px;
-    display: flex;
-    flex-direction: column;
-    margin: 10px auto;
-    position: relative;
-  }
-  
-  .postProfile {
-    display: flex;
-    gap: .5rem;
-    position: relative;
-  }
-  
-  .postProfileImg {
-    position: relative;
-  }
-  
-  .postProfileImg img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  
-  .postContent {
-    width: calc(100% - 50px - .5rem);
-    margin-left: calc(50px + .5rem); /* 프로필 이미지와 선 사이의 여백 */
-  }
-  
-  .postContent img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .postContent p {
-    /* 8줄만 출력되게하는 코드 */
-    -webkit-line-clamp: 8;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-  }
-  
-  /* line */
-  .line {
-    background: #ccc;
-    width: 60%;
-    height: .1rem;
-    margin: auto;
-    margin-bottom: .75rem;
-  }
-  
-  /* 버튼 스타일 */
-  .likes {
-    font-size: 13px;
-    color: #999;
-  }
-  
-  .likes button {
-    border-radius: 20px;
-    background-color: transparent;
-    cursor: pointer;
-    border: 1px solid #999;
-  }
-  
-  .postActions {
-    display: flex;
-    gap: .1rem;
-  }
-  
-  .actionBtn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    color: #555;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-  }
-  
-  .actionBtn:hover {
-    color: #000;
-  }
-  
-  .actionBtn:focus {
-    outline: none;
-  }
-  
+  margin-top: 0.375rem;
+}
+
+.mtL {
+  margin-top: 0.75rem;
+}
+
+.mbS {
+  margin-bottom: 0.375rem;
+}
+
+.mbL {
+  margin-bottom: 0.75rem;
+}
+
+/* font */
+.fontL {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+.fontS {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+
+.fontGrey {
+  color: rgb(87 91 92);
+}
+
+.fontRed {
+  color: red;
+}
+
+/* container */
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+/* post 페이지 */
+.postContainer {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  position: relative; /* 부모 요소에 상대 위치 설정 */
+}
+
+.postContainer::before {
+  content: "";
+  position: absolute;
+  top: calc(50px + 0.5rem); /* 프로필 이미지 끝에서 시작 */
+  left: 25px; /* 선의 위치를 맞춤 */
+  width: 2px;
+  height: calc(100% - 50px); /* 컨테이너 높이에서 프로필 이미지 높이만큼 뺌 */
+  background-color: #ccc;
+}
+
+.commentContainer {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  position: relative;
+}
+
+.postProfile {
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.postProfileImg {
+  position: relative;
+}
+
+.postProfileImg img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.postContent {
+  width: calc(100% - 50px - 0.5rem);
+  margin-left: calc(50px + 0.5rem); /* 프로필 이미지와 선 사이의 여백 */
+}
+
+.postContent img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.postContent p {
+  /* 8줄만 출력되게하는 코드 */
+  -webkit-line-clamp: 8;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+/* line */
+.line {
+  background: #ccc;
+  width: 60%;
+  height: 0.1rem;
+  margin: auto;
+  margin-bottom: 0.75rem;
+}
+
+/* 버튼 스타일 */
+.likes {
+  font-size: 13px;
+  color: #999;
+}
+
+.likes button {
+  border-radius: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #999;
+}
+
+.postActions {
+  display: flex;
+  gap: 0.1rem;
+}
+
+.actionBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.actionBtn:hover {
+  color: #000;
+}
+
+.actionBtn:focus {
+  outline: none;
+}
