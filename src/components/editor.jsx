@@ -1,13 +1,17 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
-import axios from 'axios';
+import 'react-quill/dist/quill.snow.css'; // Quill 에디터 기본 스타일
+import axios from 'axios'; // 이미지 업로드를 위한 Axios 라이브러리
 
-const Editor = () => {
-  const [value, setValue] = useState(''); // 에디터의 내용 관리
-  const quillRef = useRef(null); // Quill 인스턴스에 접근하는 useRef
+const Editor = React.memo(() => {
+  const [editorContent, setEditorContent] = useState('');
+  const quillRef = useRef(null); // Quill 인스턴스 접근용
 
-  const handleImageUpload = async () => {
+  const handleEditorChange = useCallback((content) => {
+    setEditorContent(content);
+  }, []);
+
+  const handleImageUpload = useCallback(async () => {
     const input = document.createElement('input');
     input.setAttribute('type', 'file');
     input.setAttribute('accept', 'image/*');
@@ -15,43 +19,29 @@ const Editor = () => {
 
     input.onchange = async () => {
       const file = input.files[0];
-      console.log("선택된 파일: ", file);
-
       const formData = new FormData();
       formData.append('file', file);
 
       try {
-        console.log("파일 업로드 요청 전송 중...");
-        const response = await axios.post('/api/upload', formData, {
+        // 서버에 이미지 업로드 요청
+        const response = await axios.post('/api/files/upload', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
         });
-        console.log("파일 업로드 응답 수신: ", response.data);
 
-        const imageUrl = response.data;  // 서버에서 반환된 이미지 URL
+        const imageUrl = response.data; // 서버에서 반환된 이미지 URL
         const quill = quillRef.current.getEditor(); // Quill 인스턴스 가져오기
-        const range = quill.getSelection();
-        quill.insertEmbed(range.index, 'image', imageUrl);
-        console.log("에디터에 이미지 삽입 완료: ", imageUrl);
+        const range = quill.getSelection(); // 현재 커서 위치 가져오기
+
+        quill.insertEmbed(range.index, 'image', imageUrl); // 해당 위치에 이미지 삽입
       } catch (error) {
-        console.error('이미지 업로드 실패: ', error);
+        console.error('이미지 업로드 실패:', error);
       }
     };
-  };
+  }, []);
 
-  const handleSave = async () => {
-    try {
-      console.log("내용 저장 요청 전송 중...");
-      const response = await axios.post('/saveContent', { content: value });
-      console.log("내용 저장 응답 수신: ", response.data);
-      alert('내용이 성공적으로 저장되었습니다!');
-    } catch (error) {
-      console.error('내용 저장 실패: ', error);
-      alert('내용 저장에 실패했습니다.');
-    }
-  };
-
+  // Quill 에디터의 모듈 (툴바 설정)
   const modules = {
     toolbar: {
       container: [
@@ -60,26 +50,29 @@ const Editor = () => {
         ['bold', 'italic', 'underline', 'strike', 'blockquote'],
         [{ 'list': 'ordered' }, { 'list': 'bullet' }],
         ['link', 'image'],
-        ['clean'],
+        ['clean']
       ],
       handlers: {
-        'image': handleImageUpload,  // 이미지 버튼에 대한 핸들러
-      },
+        image: handleImageUpload, // 이미지 버튼에 대한 핸들러 설정
+      }
     },
   };
 
   return (
     <div>
       <ReactQuill
-        value={value}
-        onChange={setValue}  // 에디터 내용 변경 시 상태 업데이트
+        ref={quillRef}  // Quill 인스턴스 접근용 Ref
+        value={editorContent}
+        onChange={handleEditorChange}
         placeholder="내용을 입력하세요..."
-        modules={modules}
-        ref={quillRef}  // Quill 인스턴스에 접근하기 위한 참조
+        modules={modules}  // 이미지 업로드 핸들러가 추가된 모듈
       />
-      <button onClick={handleSave}>저장</button>  {/* 저장 버튼 추가 */}
+      <div>
+        <h3>출력된 내용:</h3>
+        <div dangerouslySetInnerHTML={{ __html: editorContent }} />
+      </div>
     </div>
   );
-};
+});
 
 export default Editor;
