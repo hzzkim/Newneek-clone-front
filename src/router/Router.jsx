@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import Articles from '../components/Articles';
 import Recommends from '../components/Recommends';
 import Posts from '../components/Posts';
@@ -52,6 +52,7 @@ const Router = () => {
       <Route path="/test" element={<TestPage />} />  {/* TestPage 경로 추가 */}
       
       <Route path='/categories' element={<Categories />}>
+      <Route index element={<Navigate to="/categories/seriescategory" />} />
         <Route path='seriescategory' element={<SeriesCate />} />
         <Route path='groundcategory' element={<GroundCate />} />
       </Route>

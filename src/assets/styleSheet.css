@@ -32,6 +32,21 @@ divider: rgb(238 238 238)
 
 /* 에디터 css 속성 수정 끝 */
 
+/* 오른쪽 aside 최소 너비 */
+aside.right-aside {
+    min-width: 238px; /* 우측의 최소 너비를 238px로 설정 */
+  }
+  
+  /* 왼쪽 aside 최소 너비 */
+  aside.left-aside {
+    min-width: 216px; /* 좌측의 최소 너비를 216px로 설정 */
+  }
+  
+  /* 중앙 콘텐츠 최소 너비 */
+  .main-content {
+    min-width: 648px; /* 중앙 콘텐츠의 최소 너비를 설정 */
+  }
+
 body {
     font-family: 'Pretendard-Regular', sans-serif;
 }
