@@ -57,50 +57,70 @@ function GroundCate() {
 
     return (
         <div className='main-div flex flex-col gap-3 max-w-screen-sm w-full mx-auto md:px-9 md:border-x md:border-x-gray-100'>
-            <h1>그라운드 카테고리 관리</h1>
-
+            <div className="mb-4 flex flex-col gap-1.5 pt-3">
+            <strong className="text-lg text-black font-bold md:text-xl justify-start">그라운드 카테고리 관리</strong>
+            </div>
             {/* 카테고리 추가 */}
-            <div>
+            <div className="gap-4">
                 <input
                     type="text"
                     value={newCategory}
                     onChange={(e) => setNewCategory(e.target.value)}
                     placeholder="새 카테고리 이름"
-                />
+                /> 
                 <button onClick={handleAddCategory}>추가</button>
             </div>
-
+            <hr className="divider"></hr>
             {/* 카테고리 리스트 */}
-            <ul>
-                {categories.length === 0 ? (
-                    <li>카테고리가 없습니다</li>
-                ) : (
-                    categories.map((category) => (
-                        <li key={category.groundCategoryId}>
-                            {editCategoryId === category.groundCategoryId ? (
-                                <div>
-                                    <input
-                                        type="text"
-                                        value={editCategoryName}
-                                        onChange={(e) => setEditCategoryName(e.target.value)}
-                                    />
-                                    <button onClick={() => handleEditCategory(category.groundCategoryId)}>저장</button>
-                                    <button onClick={() => setEditCategoryId(null)}>취소</button>
-                                </div>
-                            ) : (
-                                <div>
-                                    <span>{category.name}</span>
-                                    <button onClick={() => {
-                                        setEditCategoryId(category.groundCategoryId);
-                                        setEditCategoryName(category.name);
-                                    }}>편집</button>
-                                    <button onClick={() => handleDeleteCategory(category.groundCategoryId)}>삭제</button>
-                                </div>
-                            )}
-                        </li>
-                    ))
-                )}
-            </ul>
+            <table>
+    <thead>
+        <tr>
+            <th>카테고리 이름</th>
+            <th>편집/삭제</th>
+        </tr>
+    </thead>
+    <tbody>
+        {categories.length === 0 ? (
+            <tr>
+                <td colSpan="3">카테고리가 없습니다</td>
+            </tr>
+        ) : (
+            categories.map((category) => (
+                <tr key={category.groundCategoryId}>
+                    <td>
+                        {editCategoryId === category.groundCategoryId ? (
+                            <input
+                                type="text"
+                                value={editCategoryName}
+                                onChange={(e) => setEditCategoryName(e.target.value)}
+                            />
+                        ) : (
+                            <span>{category.name}</span>
+                        )}
+                    </td>
+                    <td>
+                        {editCategoryId === category.groundCategoryId ? (
+                            <>
+                                <button onClick={() => handleEditCategory(category.groundCategoryId)}>저장</button>
+                                <button onClick={() => setEditCategoryId(null)}>취소</button>
+                            </>
+                        ) : (
+                            <button
+                                onClick={() => {
+                                    setEditCategoryId(category.groundCategoryId);
+                                    setEditCategoryName(category.name);
+                                }}
+                            >
+                                편집
+                            </button>
+                        )}
+                        <button onClick={() => handleDeleteCategory(category.groundCategoryId)}>삭제</button>
+                    </td>
+                </tr>
+            ))
+        )}
+    </tbody>
+</table>
         </div>
     );
 }
