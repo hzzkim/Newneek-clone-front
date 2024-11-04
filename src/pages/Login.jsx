@@ -28,38 +28,44 @@ function Login({ onClose }) {
     });
   };
 
-  // 폼 제출 처리
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      // 백엔드와 연결해서 로그인 처리
-      const response = await axios.post('http://localhost:8080/api/auth/login', formData);
+ // 폼 제출 처리
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await axios.post('http://localhost:8080/api/auth/login', formData, {
+      headers: { 'Content-Type': 'application/json' },
+    });
 
-      if (response.status === 200) {
-        console.log('로그인 성공:', response.data);
+    if (response.status === 200 && response.data.token) { // 응답에서 토큰 확인
+      console.log('로그인 성공:', response.data);
 
-        // 팝업 닫기
-        onClose();
-        
-        // 로그인 성공 시 시리즈 페이지로 리디렉트
-        navigate('/series');
-      } else {
-        console.error('로그인 실패:', response.status, response.data);
-        setErrorMessage('로그인 실패: 이메일 또는 비밀번호를 확인해 주세요.');
-      }
-    } catch (error) {
-      console.error('서버 에러:', error);
-      
-      // 서버 에러 또는 비밀번호 오류 처리
-      if (error.response && error.response.status === 401) {
-        setErrorMessage('잘못된 비밀번호입니다.');
-      } else if (error.response && error.response.status === 404) {
-        setErrorMessage('등록되지 않은 이메일입니다.');
-      } else {
-        setErrorMessage('서버에 문제가 발생했습니다. 잠시 후 다시 시도해 주세요.');
-      }
+      // 백엔드에서 받은 토큰을 localStorage에 저장
+      const { token } = response.data;
+      localStorage.setItem('token', token); // 토큰을 localStorage에 저장
+
+      // 팝업 닫기
+      onClose();
+
+      // 로그인 성공 시 시리즈 페이지로 리디렉트
+      navigate('/series');
+    } else {
+      console.error('로그인 실패:', response.status, response.data);
+      setErrorMessage('로그인 실패: 이메일 또는 비밀번호를 확인해 주세요.');
     }
-  };
+  } catch (error) {
+    console.error('서버 에러:', error);
+
+    // 서버 에러 또는 비밀번호 오류 처리
+    if (error.response && error.response.status === 401) {
+      setErrorMessage('잘못된 비밀번호입니다.');
+    } else if (error.response && error.response.status === 404) {
+      setErrorMessage('등록되지 않은 이메일입니다.');
+    } else {
+      setErrorMessage('서버에 문제가 발생했습니다. 잠시 후 다시 시도해 주세요.');
+    }
+  }
+};
+
 
   const handleSignupClick = () => {
     onClose();
@@ -142,7 +148,7 @@ function Login({ onClose }) {
           )}
         </div>
 
-        <a onClick= {handleSignupClick} style={{ cursor: 'pointer' }}>회원가입</a>
+        <a onClick={handleSignupClick} style={{ cursor: 'pointer' }}>회원가입</a>
         <a onClick={() => navigate('/forgot-password')} style={{ cursor: 'pointer' }}>비밀번호 찾기</a>
       </div>
     </div>
