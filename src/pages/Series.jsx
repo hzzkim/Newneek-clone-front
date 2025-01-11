@@ -3,6 +3,7 @@ import styles from '../assets/Main.module.css';
 import SeriesProfile from "../components/series/SeriesProfile";
 import { Outlet, useLocation, useParams } from "react-router-dom";
 import seriesData from '../ArticleData';  // Series 데이터베이스 예시
+import MyProfile from "../components/MyProfile";
 
 function MainPage() {
   const location = useLocation();
@@ -27,7 +28,11 @@ function MainPage() {
       <div className={styles.parent}>
         {/* 왼쪽 */}
         <div className={styles.child1}>
+        <aside className='custom-scroll-bar sticky top-16 z-40 h-[calc(100vh-64px)] w-[216px] flex-col py-7 xl:flex'>
           {foundSeries && <SeriesProfile series={foundSeries} />}
+          <MyProfile /> 
+        </aside>
+
         </div>
 
         {/* 중앙 */}

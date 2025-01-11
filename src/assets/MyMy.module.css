@@ -1,0 +1,94 @@
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding:67px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+  }
+  
+  .profileImage {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 auto;
+  }
+  
+  .username {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
+  
+  .nickname {
+    color: #888;
+  }
+  
+  .stats {
+    font-size: 14px;
+    color: #888;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .about {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    white-space: pre-line; /* 줄바꿈 처리 */
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  .editButton {
+    background-color: #FFDDC1;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #888;
+  }
+  
+  .tab.active {
+    border-bottom: 2px solid #FF6B6B;
+    color: #FF6B6B;
+  }
+  
+  .articleContainer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .emoji {
+    font-size: 50px;
+  }
+  
+  .noArticlesText {
+    margin-top: 10px;
+    color: #888;
+  }
+  
+  .newArticleButton {
+    background-color: #FF6B6B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
