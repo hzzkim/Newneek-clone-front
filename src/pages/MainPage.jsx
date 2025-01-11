@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import styles from '../assets/Main.module.css';
 import StickyNav from "../components/StickyNav";
+import MyProfile from "../components/MyProfile";
 import { Outlet, useLocation } from "react-router-dom";
 
 function MainPage() {
@@ -19,6 +20,9 @@ function MainPage() {
       <div className={styles.parent}>
         {/* 왼쪽 */}
         <div className={styles.child1}>
+        <aside className='custom-scroll-bar sticky top-16 z-40 h-[calc(100vh-64px)] w-[216px] flex-col py-7 xl:flex'>
+          <MyProfile /> 
+        </aside>
         </div>
 
         {/* 중앙 */}

@@ -1,0 +1,102 @@
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding:67px 20px;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.profileImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: block;
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+.profileImage input {
+  display: none;
+}
+
+.cameraIcon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.input, .select, .textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row .input, .row .select {
+  flex: 1;
+}
+
+.button {
+  display: inline-block; /* 너비를 콘텐츠 크기에 맞춤 */
+  padding: 8px 16px; /* 버튼의 세로와 가로 패딩을 줄임 */
+  background-color: #ff6b6b;
+  color: #fff;
+  font-size: 14px; /* 폰트 크기 축소 */
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #e65b5b;
+}
+
+.backLink {
+  display: block;
+  font-size: 14px;
+  color: #ff6b6b;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.profilePreview {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}

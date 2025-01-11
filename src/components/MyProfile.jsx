@@ -41,7 +41,7 @@ function MyProfile() {
   // 사용자 정보가 로드된 경우 프로필 정보를 표시
   return (
     <div className='flex flex-col gap-4'>
-      <a href={`/@${loggedInUser.id}`} className='flex gap-2'>
+      <a href={`/${loggedInUser.user_id}`} className='flex gap-2'>
         <img
           src={loggedInUser.profileImage || '/images/default-profile.png'}  // 프로필 이미지가 없을 경우 기본 이미지
           alt="Profile"

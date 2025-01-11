@@ -1,56 +1,71 @@
-/* button, h1, ul {
-  margin: 0;
-  padding: 0;
-} */
-
-.headerContainer {
-  position: fixed;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  height: 3rem;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
 }
 
-.header {
-    background-color: #ff5e00;
-    color: white;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
 
-  .headerLeft {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-  }
+.beta {
+  font-size: 0.8em;
+  color: orange;
+  margin-left: 5px;
+}
 
-  .header h1 a {
-    color: white;
-    text-decoration-line: none;
-    margin-right: 1rem;
-  }
-  
-  .header nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-    font-weight: 800;
-    cursor: pointer;
-  }
-  
-  .loginButton {
-    margin: 0;
-    background-color: white;
-    color: #f57c00;
-    border: none;
-    padding: 5px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-  }
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.profileContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profileImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.logoutBtn {
+  border: none;
+  background: none;
+  color: gray;
+  cursor: pointer;
+}
+
+.loginBtn {
+  padding: 5px 10px;
+  border: 1px solid orange;
+  background-color: white;
+  color: orange;
+  border-radius: 5px;
+  cursor: pointer;
+}

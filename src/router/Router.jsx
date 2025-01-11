@@ -20,6 +20,11 @@ import ArticleEdit from '../pages/ArticleEdit';
 import Categories from '../pages/Categories';
 import SeriesCate from '../components/categories/SeriesCate';
 import GroundCate from '../components/categories/GroundCate';
+import MyProfile from '../components/MyProfile';
+import MyPage from '../pages/MyMy';
+import ProfileEdit from '../pages/ProfileEdit';
+import PasswordReset from '../pages/PasswordReset';
+import PasswordRestart from '../pages/PasswordRestart';
 
 const Router = () => {
 
@@ -28,6 +33,8 @@ const Router = () => {
       <Route path="/" element={<MainPage />} />
       <Route path="/imnew" element={<ImNew />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/forgot" element={<PasswordReset />} />
+      <Route path="/restart" element={<PasswordRestart />} />
       <Route path="/signupform" element={<Signupform />} />
       <Route path="/" element={<MainPage />}>
         <Route index element={<Recommends />} />
@@ -54,6 +61,13 @@ const Router = () => {
       <Route path='/categories' element={<Categories />}>
         <Route path='seriescategory' element={<SeriesCate />} />
         <Route path='groundcategory' element={<GroundCate />} />
+      </Route>
+
+      <Route>
+        <Route path="/" element={<MyProfile />} />
+        <Route path="/:user_id" element={<MyPage />} /> {/* MyPage로 연결하는 경로 */}
+        <Route path="/profile_edit" element={<ProfileEdit />} />
+      
       </Route>
     </Routes>
   );

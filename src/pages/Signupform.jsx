@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Axios 임포트
-import Header from '../template/Header.jsx';
-import Footer from '../template/Footer.jsx';
 import styles from '../assets/Signupform.module.css';
 
 const SignupForm = () => {
@@ -71,7 +69,7 @@ const SignupForm = () => {
 
   return (
     <div>
-      <Header />
+
       <div className={styles.signupContainer}>
         <h1 className={styles.signformName}>회원가입</h1>
         <p className={styles.signform_p}>
@@ -186,7 +184,7 @@ const SignupForm = () => {
           </button>
         </form>
       </div>
-      <Footer />
+     
     </div>
   );
 };

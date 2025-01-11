@@ -28,10 +28,10 @@ function MainPage() {
       <div className={styles.parent}>
         {/* 왼쪽 */}
         <div className={styles.child1}>
+        <aside className='custom-scroll-bar sticky top-16 z-40 h-[calc(100vh-64px)] w-[216px] flex-col py-7 xl:flex'>
           {foundSeries && <SeriesProfile series={foundSeries} />}
-          <aside className='custom-scroll-bar sticky top-16 z-40 h-[calc(100vh-64px)] w-[216px] flex-col py-7 xl:flex'>
           <MyProfile /> 
-          </aside>
+        </aside>
 
         </div>
 
