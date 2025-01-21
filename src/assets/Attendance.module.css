@@ -1,0 +1,64 @@
+/* font-face */
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+      format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/* Container 스타일 */ 
+.container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* 제목 스타일 */
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* 달력 섹션 스타일 */
+  .calendarSection {
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* 소제목 스타일 */
+  .subtitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* 선택된 날짜 스타일 */
+  .selectedDate {
+    margin-top: 10px;
+  }
+  
+  /* 버튼 섹션 스타일 */
+  .buttonSection {
+    margin-top: 20px;
+  }
+  
+  /* 버튼 스타일 */
+  .orangeButton {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .orangeButton:hover {
+    background-color: darkorange;
+  }
+  

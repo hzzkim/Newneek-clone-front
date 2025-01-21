@@ -13,7 +13,7 @@ function Categories() {
                 </div>
 
                 {/* 중앙 */}
-                <div>
+                <div className='mx-auto flex w-full max-w-screen-sm main-content flex-col'>
                     {/* CateNav가 항상 출력 */}
                     <CateNav />
                     {/* Outlet을 통해 SeriesCate와 GroundCate가 출력 */}

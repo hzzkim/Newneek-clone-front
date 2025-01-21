@@ -1,15 +1,31 @@
-// TestPage.jsx
-import React from 'react';
-import Editor from '../components/editor';
-import 'react-quill/dist/quill.snow.css'; // Quill 에디터의 기본 스타일
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-const TestPage = () => {
-  return (
-    <div className="test-page">
-      <h1 style={{ marginTop: "100px" }}>React Quill 에디터 테스트</h1>
-      <Editor />
-    </div> 
-  );
+const CrawlingTest = () => {
+    const [lists, setLists] = useState('');
+    const [error, setError] = useState('');
+
+    useEffect(() => {
+        const fetchLists = async () => {
+            try {
+                const response = await axios.get('http://localhost:8080/api/test'); // Spring Boot API URL
+                setLists(response.data); // 데이터를 리스트로 저장
+            } catch (err) {
+                setError('Failed to fetch data');
+                console.error(err);
+            }
+        };
+
+        fetchLists();
+    }, []);
+
+    return (
+        <div style={{ marginTop: "100px" }}>
+            <h1>Test Crawling</h1>
+            {error && <p>{error}</p>}
+            <pre>{lists}</pre> {/* 크롤링된 결과를 <pre> 태그로 출력하여 포맷 유지 */}
+        </div>
+    );
 };
 
-export default TestPage;
+export default CrawlingTest;
